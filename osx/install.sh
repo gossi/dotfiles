@@ -89,7 +89,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
+#defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
