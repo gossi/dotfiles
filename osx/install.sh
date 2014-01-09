@@ -17,7 +17,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX #
 ###############################################################################
 
-# Set computer name (as done via System Preferences → Sharing)
+# Set computer name (as done via System Preferences ? Sharing)
 sudo scutil --set ComputerName "Bembel"
 sudo scutil --set HostName "Bembel"
 sudo scutil --set LocalHostName "Bembel"
@@ -28,7 +28,7 @@ defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 # Disable Spotlight
-sudo mdutil -a -i off
+#sudo mdutil -a -i off
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true

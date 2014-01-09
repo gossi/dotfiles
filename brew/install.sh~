@@ -13,5 +13,21 @@ fi
 brew update
 brew upgrade
 
+# joe editor
+brew install joe
+
+# php5.4
+brew tap homebrew/dupes
+brew tap josegonzalez/homebrew-php
+brew install php54
+brew install php54-intl
+
+# core
+brew install coreutils
+
+# misc
+brew install git
+brew install hub
+
 # cleanup
 brew cleanup

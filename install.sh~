@@ -26,7 +26,7 @@ touch ~/.profile
 # run installers
 for file in `ls -d */`
 do
-	[ $file != "brew/" ] && [ $file != "git/" ] && install $file;
+	[ $file != "brew/" && $file != "git/" ] && install $file;
 
 	autoload="${file}autoload"
 	if [ -e $autoload ]; then 

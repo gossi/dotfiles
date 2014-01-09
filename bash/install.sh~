@@ -1,0 +1,2 @@
+#install pygments for 'c'
+sudo easy_install Pygments
