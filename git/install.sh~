@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# install
-brew install git
-brew install hub
-
-# autocompletion
-curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.sh
-chmod +x ~/.git-completion.sh
