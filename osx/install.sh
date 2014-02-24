@@ -83,6 +83,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 # Use column view in all Finder windows by default
 # Four-letter codes for the other view modes: `Nlsv`, `icnv`, `clmv`, `Flwv`
