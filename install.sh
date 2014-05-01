@@ -36,3 +36,12 @@ do
 		echo " " >> ~/.profile
 	fi
 done
+
+# local contributions to .profile
+contrib=~/.profile_contrib
+
+if [ -s $contrib ]; then
+	echo "# Local contributions" >> ~/.profile
+	cat $contrib >> ~/.profile
+	echo " " >> ~/.profile
+fi

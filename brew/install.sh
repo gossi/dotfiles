@@ -9,6 +9,9 @@ else
 	echo " + Homebrew found."
 fi
 
+# install brew-cask
+brew install phinze/cask/brew-cask
+
 # update + upgrade
 brew update
 brew upgrade
