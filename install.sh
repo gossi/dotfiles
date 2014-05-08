@@ -18,6 +18,7 @@ function install {
 # install brew and git first
 install "brew/"
 install "git/"
+install "node/"
 
 # prepare ~/.profile
 rm ~/.profile
@@ -26,7 +27,7 @@ touch ~/.profile
 # run installers
 for file in `ls -d */`
 do
-	[ $file != "brew/" ] && [ $file != "git/" ] && install $file;
+	[ $file != "brew/" ] && [ $file != "git/" ] && [ $file != "node/" ] && install $file;
 
 	autoload="${file}autoload"
 	if [ -e $autoload ]; then 
