@@ -10,5 +10,6 @@ brew install php54
 brew install php54-intl
 
 # composer
-brew install composer
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
 composer self-update
