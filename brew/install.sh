@@ -10,7 +10,7 @@ else
 fi
 
 # install brew-cask
-brew install phinze/cask/brew-cask
+brew install caskroom/cask/brew-cask
 
 # update + upgrade
 brew update

@@ -8,8 +8,16 @@ brew tap homebrew/php
 # install php5.4
 brew install php54
 brew install php54-intl
+brew install php54-xdebug
 
 # composer
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 composer self-update
+
+# tools
+composer global require 'phpunit/phpunit=~4'
+composer global require fabpot/php-cs-fixer @stable
+
+# update composer dependencies
+composer global update
