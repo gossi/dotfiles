@@ -10,3 +10,4 @@ brew cask install quicklook-csv
 brew cask install betterzipql 
 brew cask install webp-quicklook 
 brew cask install suspicious-package
+brew cask install qlimagesize

@@ -104,3 +104,12 @@ killall "Finder" > /dev/null 2>&1
 
 # Start Apache on every boot
 sudo defaults write /System/Library/LaunchDaemons/org.apache.httpd Disabled -bool false
+
+
+##############################################################################
+# Shell #
+###############################################################################
+
+# Install lsusb command
+brew tap jlhonora/lsusb
+brew install lsusb
