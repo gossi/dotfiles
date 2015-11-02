@@ -21,4 +21,4 @@ git clone https://github.com/gossi/dotfiles.git ~/.dotfiles && ~/.dotfiles/insta
 
 ## References
 * [herrbischoff/awesome-osx-command-line](https://github.com/herrbischoff/awesome-osx-command-line) a collection of osx-related cli commands
-* 
+
