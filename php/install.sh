@@ -6,9 +6,9 @@ brew tap homebrew/versions
 brew tap homebrew/php
 
 # install php5.4
-brew install php54
-brew install php54-intl
-brew install php54-xdebug
+brew install php55
+brew install php55-intl
+brew install php55-xdebug
 
 # composer
 curl -sS https://getcomposer.org/installer | php

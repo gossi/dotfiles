@@ -10,11 +10,8 @@ else
 fi
 
 # install brew-cask
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 # update + upgrade
 brew update
 brew upgrade
-
-# cleanup
-brew cleanup

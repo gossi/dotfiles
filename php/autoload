@@ -1,1 +1,2 @@
 export PATH=~/.composer/vendor/bin:$PATH
+alias phpunit="php -dzend_extension=/usr/local/opt/php55-xdebug/xdebug.so $(which phpunit)"

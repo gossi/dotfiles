@@ -2,3 +2,6 @@ export PATH="$(brew --prefix)/bin:/usr/local/sbin:$PATH";
 
 # bash completion
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+
+# cask options
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"

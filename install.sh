@@ -46,3 +46,7 @@ if [ -s $contrib ]; then
 	cat $contrib >> ~/.profile
 	echo " " >> ~/.profile
 fi
+
+# cleanup
+brew cleanup
+brew cask cleanup
