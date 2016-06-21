@@ -24,6 +24,10 @@ install "node/"
 rm ~/.profile
 touch ~/.profile
 
+echo "# Initial PATH setting" >> ~/.profile
+echo 'export PATH="/usr/local/bin:/usr/local/sbin:$PATH";' >> ~/.profile
+echo " " >> ~/.profile
+
 # run installers
 for file in `ls -d */`
 do

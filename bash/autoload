@@ -91,35 +91,11 @@ function git_info() {
 }
 
 # iTerm Tab and Title Customization and prompt customization
-# http://sage.ucsc.edu/xtal/iterm_tab_customization.html
-
-# Put the string " [bash] hostname::/full/directory/path"
-# in the title bar using the command sequence
-# \[\e]2;[bash] \h::\]$PWD\[\a\]
-# alternative:
-# \033]0;$PWD\007
-# see: http://apple.stackexchange.com/a/90737/9122
-
+#
 # Put the penultimate and current directory
-# in the iterm tab
+# in the iterm tab (which doesn't work):
 # \[\e]1;\]$(basename $(dirname $PWD))/\W\[\a\]
-PS1="\[\e]2;\w\[\a\]\[\e]1;\]\w\[\a\]\[$CYAN\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$YELLOW\]\w\$(git_info)\[$WHITE\]\n\$ \[$RESET\]"
-
-# Autocomplete Hostnames for SSH etc.
-# by Jean-Sebastien Morisset (http://surniaulula.com/)
-_complete_hosts () {
-	COMPREPLY=()
-	cur="${COMP_WORDS[COMP_CWORD]}"
-	host_list=`{ 
-		for c in /etc/ssh_config /etc/ssh/ssh_config ~/.ssh/config
-		do [ -r $c ] && sed -n -e 's/^Host[[:space:]]//p' -e 's/^[[:space:]]*HostName[[:space:]]//p' $c
-		done
-		for k in /etc/ssh_known_hosts /etc/ssh/ssh_known_hosts ~/.ssh/known_hosts
-		do [ -r $k ] && egrep -v '^[#\[]' $k|cut -f 1 -d ' '|sed -e 's/[,:].*//g'
-		done
-		sed -n -e 's/^[0-9][0-9\.]*//p' /etc/hosts; }|tr ' ' '\n'|grep -v '*'`
-	COMPREPLY=( $(compgen -W "${host_list}" -- $cur))
-	return 0
-}
-complete -F _complete_hosts ssh
-complete -F _complete_hosts host
+# \[\e]1;STRING\[\a\] -> tab bar
+# \[\e]2;STRING\[\a\] -> window bar
+# everything that follows tha last bell sequence (\a) will be part of the prompt
+PS1="\[\e]2;\u@\h: \w\[\a\]\[\e]1;\]\w\[\a\]\[$CYAN\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$YELLOW\]\w\$(git_info)\[$WHITE\]\n\$ \[$RESET\]"

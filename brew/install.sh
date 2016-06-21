@@ -9,6 +9,10 @@ else
 	echo " + Homebrew found."
 fi
 
+# install bash auto completion
+brew install bash-completion
+brew tap homebrew/completions
+
 # install brew-cask
 brew tap caskroom/cask
 
