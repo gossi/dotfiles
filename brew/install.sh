@@ -3,7 +3,7 @@
 if test ! $(which brew)
 then
 	echo " Install homebrew: "
-	ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	#exit
 else
 	echo " + Homebrew found."
