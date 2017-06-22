@@ -1,3 +1,5 @@
 export PATH="/usr/local/share/npm/bin:$PATH";
 export NODE_MODULES="/usr/local/lib/node_modules";
 export NJS_SHELL="/usr/local/bin";
+export NVM_DIR="$HOME/.nvm";
+. "/usr/local/opt/nvm/nvm.sh"

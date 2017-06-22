@@ -1,3 +1,4 @@
+brew install watchman
 brew install yarn
 yarn global add bower
 yarn global upgrade
