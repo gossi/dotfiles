@@ -7,6 +7,9 @@ alias reseticons="sudo rm -rfv /Library/Caches/com.apple.iconservices.store; sud
 # Reset "opening appplication .... for the first time"
 alias resetappopen="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -all local,system,user"
 
+# Add spacer to dock
+alias addspacer="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}'; killall Dock"
+
 # Empty the Trash on all mounted volumes and the main HDD
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 
