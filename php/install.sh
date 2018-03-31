@@ -1,17 +1,12 @@
 #!/bin/bash
 
-# tap repos
-brew tap homebrew/dupes
-#brew tap homebrew/versions
-brew tap homebrew/php
-
-# install php5.6
-brew install php71 --with-httpd24
-brew install php71-intl
-brew install php71-xdebug
-brew install php71-opcache
-brew install php71-apcu
-brew install php71-yaml
+# install php
+brew install php@71 --with-httpd24
+#brew install php71-intl
+#brew install php71-xdebug
+#brew install php71-opcache
+#brew install php71-apcu
+#brew install php71-yaml
 
 # composer
 curl -sS https://getcomposer.org/installer | php
