@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # install php
-brew install php@71 --with-httpd24
+brew install php@7.2
+pecl install xdebug
 #brew install php71-intl
 #brew install php71-xdebug
 #brew install php71-opcache

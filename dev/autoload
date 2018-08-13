@@ -1,1 +1,9 @@
 export PATH="$(yarn global bin | grep -o '/.*'):$PATH"
+
+# ember
+alias e="ember"
+alias ec="ember-cli-create"
+alias ee="ember electron"
+alias eg="ember generate"
+alias es="ember serve"
+alias et="ember test"

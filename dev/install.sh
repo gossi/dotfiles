@@ -1,6 +1,5 @@
 brew install watchman
 brew install yarn
-yarn global add bower
 yarn global upgrade
 #npm install -g less
 #npm install -g coffee
