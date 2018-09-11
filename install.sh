@@ -59,4 +59,3 @@ fi
 
 # cleanup
 brew cleanup
-brew cask cleanup
