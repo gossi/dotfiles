@@ -1,16 +1,14 @@
 alias git=hub;
 alias gst="git status";
 alias gco="git checkout";
+alias gb="git branch";
+alias gf="git fetch";
+alias gfa="git fetch --all";
+alias gpr="git pull -r";
 
-# git autocompletion
-#if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-#  . /usr/local/etc/bash_completion.d/git-completion.bash
-#fi
+# Remove `+` and `-` from start of diff lines; just rely upon color.
+alias gd='git diff --color | sed "s/^\([^-+ ]*\)[-+ ]/\\1/" | less -r'
 
-#if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
-#  . /usr/local/etc/bash_completion.d/git-prompt.sh
-#fi
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
-#if [ -f /usr/local/etc/bash_completion.d/hub.bash_completion.sh ]; then
-#  . /usr/local/etc/bash_completion.d/hub.bash_completion.sh
-#fi
+# References: https://github.com/holman/dotfiles/blob/master/git/aliases.zsh
