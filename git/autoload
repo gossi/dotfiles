@@ -1,4 +1,6 @@
 alias git=hub;
+alias gst="git status";
+alias gco="git checkout";
 
 # git autocompletion
 #if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
