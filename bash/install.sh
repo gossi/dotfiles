@@ -11,3 +11,6 @@ sudo easy_install Pygments
 
 # if easy_install doesn't work
 # go here: http://stackoverflow.com/a/12574436/483492
+
+brew install bat
+brew install fd
