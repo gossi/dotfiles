@@ -14,3 +14,21 @@ sudo easy_install Pygments
 
 brew install bat
 brew install fd
+
+# install prettyping
+curl -O https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
+chmod +x prettyping
+mv prettyping /usr/local/bin/
+
+# fuzzy finder (fzf)
+brew install fzf
+
+# htop
+brew install htop
+
+# ncdu
+brew install ncdu
+
+# tldr / help
+brew install tldr
+
