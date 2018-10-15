@@ -8,5 +8,6 @@ yarn global upgrade
 #npm install -g bower
 #npm install -g stylus
 #npm install -g stylestats
-sudo gem install sass
+#sudo gem install sass
+brew install sass/sass/sass
 sudo gem install travis
