@@ -32,3 +32,6 @@ brew install ncdu
 # tldr / help
 brew install tldr
 
+# fkill
+yarn global add fkill-cli
+
