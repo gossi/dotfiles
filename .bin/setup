@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "Installing homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install yadm fish
+
+echo "Installing dotfiles"
+yadm clone https://github.com/gossi/dotfiles.git --no-botstrap
+
+# check if class is available and set it
+
+# run bootstrap
+yadm bootstrap
