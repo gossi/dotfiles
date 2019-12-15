@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>0A1F079D-AB04-4AF2-BE23-EB87A77ECFDB</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>tvdb</string>
+			<key>text</key>
+			<string>Search TheTVDB for '{query}'</string>
+			<key>url</key>
+			<string>https://www.thetvdb.com/search?q={query}&amp;l=de</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E867E6FC-7CFD-434E-BC0B-1042B08034C4</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>mdn</string>
+			<key>text</key>
+			<string>MDN</string>
+			<key>url</key>
+			<string>https://developer.mozilla.org/en-US/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
