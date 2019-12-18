@@ -9,6 +9,15 @@ gossis dotfiles. Highlights:
 
 ## Installation
 
+Default:
+
 ```bash
-todo
+curl -L https://git.io/Je5mN | bash
 ```
+
+Given context
+
+```bash
+curl -L https://git.io/Je5mN | bash -s Work
+```
+
