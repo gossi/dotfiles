@@ -1,0 +1,10 @@
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+style = "bold dark-yellow"
+
+[hostname]
+style = "orange"
+
+[username]
+style_user = "white"
