@@ -1,0 +1,1 @@
+source ~/.config/dft/ember/alias.fish

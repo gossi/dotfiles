@@ -1,0 +1,6 @@
+alias e 'ember'
+alias ee 'ember electron'
+alias eg 'ember generate'
+alias es 'ember serve'
+alias est 'ember serve -e test -p 4300'
+alias et 'ember test'
