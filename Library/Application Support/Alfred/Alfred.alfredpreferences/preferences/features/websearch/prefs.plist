@@ -17,6 +17,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>CA1AADDC-3F97-48A5-831C-BC8AAF0937BA</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>npm</string>
+			<key>text</key>
+			<string>Search npm for '{query}'</string>
+			<key>url</key>
+			<string>https://www.npmjs.com/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>E867E6FC-7CFD-434E-BC0B-1042B08034C4</key>
 		<dict>
 			<key>enabled</key>
