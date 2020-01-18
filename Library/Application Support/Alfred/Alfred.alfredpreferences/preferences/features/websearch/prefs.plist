@@ -13,7 +13,33 @@
 			<key>text</key>
 			<string>Search TheTVDB for '{query}'</string>
 			<key>url</key>
-			<string>https://www.thetvdb.com/search?q={query}&amp;l=de</string>
+			<string>https://thetvdb.com/search?query={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>1FFE7C1F-308C-4D35-8B0B-5F3A307AA18A</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gh</string>
+			<key>text</key>
+			<string>Go to github.com/{query}</string>
+			<key>url</key>
+			<string>https://github.com/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>9829D604-FBA6-41EE-B31C-51792B55B81D</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>d</string>
+			<key>text</key>
+			<string>Translate '{query}'</string>
+			<key>url</key>
+			<string>https://dict.leo.org/englisch-deutsch/{query}</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
