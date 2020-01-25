@@ -18,5 +18,5 @@ curl -L https://git.io/gossi-dotfiles | bash
 Given context
 
 ```bash
-curl -L https://git.io/gossi-dotfiles | bash -s Work
+curl -L https://git.io/gossi-dotfiles | bash -s work
 ```
