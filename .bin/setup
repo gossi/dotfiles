@@ -5,11 +5,11 @@ echo "Installing homebrew"
 brew install yadm
 
 echo "Installing dotfiles"
-yadm clone https://github.com/gossi/dotfiles.git --no-botstrap
+yadm clone https://github.com/gossi/dotfiles.git --no-bootstrap
 
 # check if class is available and set it
 if [ $# -gt 0 ]; then
-  yadm config local.class Work
+  yadm config local.class $1
 fi
 
 # let yadm do the rest

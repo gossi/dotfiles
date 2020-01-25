@@ -12,12 +12,11 @@ gossis dotfiles. Highlights:
 Default:
 
 ```bash
-curl -L https://git.io/Je5mN | bash
+curl -L https://git.io/gossi-dotfiles | bash
 ```
 
 Given context
 
 ```bash
-curl -L https://git.io/Je5mN | bash -s Work
+curl -L https://git.io/gossi-dotfiles | bash -s Work
 ```
-
