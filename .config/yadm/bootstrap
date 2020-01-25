@@ -20,6 +20,12 @@ echo "Activate fish"
 echo $(which fish) | sudo tee -a /etc/shells > /dev/null
 chsh -s $(which fish)
 
+# Install volta
+curl https://get.volta.sh | bash
+
+volta install node
+volta install yarn
+
 # Install fisher
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 fish -c fisher
