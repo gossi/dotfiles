@@ -1,1 +1,1 @@
-yarn global add ember-cli
+volta install ember-cli

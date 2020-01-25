@@ -21,10 +21,12 @@ echo $(which fish) | sudo tee -a /etc/shells > /dev/null
 chsh -s $(which fish)
 
 # Install volta
-curl https://get.volta.sh | bash
+fish -c 'curl https://get.volta.sh | bash'
 
-volta install node
-volta install yarn
+fish -c 'source $HOME/.config/fish/config.fish'
+
+fish -c 'volta install node'
+fish -c 'volta install yarn'
 
 # Install fisher
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher

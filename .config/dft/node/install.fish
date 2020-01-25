@@ -1,1 +1,1 @@
-yarn global add lerna
+volta install lerna
