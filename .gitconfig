@@ -10,3 +10,7 @@
 [user]
 	name = gossi
 	email = gossi@users.noreply.github.com
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = main
