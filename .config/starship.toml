@@ -15,7 +15,7 @@ disabled = true
 [git_branch]
 symbol = "🌱 "
 
-[staged]
+[git_status]
 conflicted = "🏳"
 ahead = "🏎💨"
 behind = "😰"
