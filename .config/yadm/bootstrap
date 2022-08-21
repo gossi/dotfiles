@@ -13,7 +13,9 @@ if [ "$system_type" = "Darwin" ]; then
 fi
 
 # iterm
+# ref: https://shyr.io/blog/sync-iterm2-configs
 defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.config/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 # Activate fish
 echo "Activate fish"
