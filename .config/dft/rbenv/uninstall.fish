@@ -1,3 +1,3 @@
 rm -rf ~/.rbenv
 brew uninstall rbenv
-fisher rm rbenv/fish-rbenv
+fisher remove rbenv/fish-rbenv
