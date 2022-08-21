@@ -29,8 +29,8 @@ fish -c 'volta install node'
 fish -c 'volta install yarn'
 
 # Install fisher
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-fish -c fisher
+curl -sL https://git.io/fisher | source
+fish -c fisher install jorgebucaran/fisher
 
 # Install topics
 fish -c 'dft install'
