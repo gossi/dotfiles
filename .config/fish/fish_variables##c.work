@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR BUNDLE_GITHUB__COM:x\x2daccess\x2dtoken\x3a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
 SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
 SETUVAR FZF_DISABLE_KEYBINDINGS:0
 SETUVAR FZF_LEGACY_KEYBINDINGS:1
@@ -51,3 +50,4 @@ SETUVAR fish_pager_color_description:49483E
 SETUVAR fish_pager_color_prefix:F8F8F2
 SETUVAR fish_pager_color_progress:F8F8F2
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/Users/gossi/\x2erbenv/shims\x1e/Users/gossi/\x2erbenv/bin

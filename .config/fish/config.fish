@@ -1,6 +1,10 @@
 source ~/.config/fish/alias.fish
 source ~/.config/fish/paths.fish
 
+if test -f ~/.config/fish/.private-config.fish
+  source ~/.config/fish/.private-config.fish
+end
+
 set -U fish_greeting ""
 
 # colors
