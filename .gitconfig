@@ -2,6 +2,7 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	ignorecase = false
 	editor = nano
+	excludesfile = ~/.gitignore
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
