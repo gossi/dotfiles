@@ -1,4 +1,3 @@
-source ~/.config/fish/alias.fish
 source ~/.config/fish/paths.fish
 
 if test -f ~/.config/fish/.private-config.fish
