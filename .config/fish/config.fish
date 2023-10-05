@@ -31,7 +31,10 @@ set -g fish_color_valid_path --underline
 
 # starship
 starship init fish | source
+
+# volta
 set -gx VOLTA_HOME "$HOME/.volta"
+set -gx VOLTA_FEATURE_PNPM 1
 string match -r ".volta" "$PATH" > /dev/null; or set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 # pnpm
