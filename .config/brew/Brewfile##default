@@ -1,8 +1,6 @@
-tap "caskroom/cask"
 tap "dart-lang/dart"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/core"
 tap "jlhonora/lsusb"
 tap "sass/sass"
 tap "tomanthony/brews"
@@ -22,7 +20,6 @@ brew "ncdu"
 brew "php"
 brew "starship"
 brew "tldr"
-brew "unrar"
 brew "watchman"
 brew "yadm"
 brew "sass/sass/sass"
@@ -31,7 +28,6 @@ cask "alfred"
 cask "betterzip"
 cask "java"
 cask "kap"
-cask "playonmac"
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
@@ -39,12 +35,10 @@ cask "qlprettypatch"
 cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
-cask "rectangle"
 cask "suspicious-package"
 cask "webpquicklook"
 mas "Adblock Plus", id: 1432731683
 mas "C. Anatomy 2020", id: 1141323850
-mas "Evernote", id: 406056744
 mas "Gifski", id: 1351639930
 mas "The Unarchiver", id: 425424353
 mas "VOX", id: 461369673
