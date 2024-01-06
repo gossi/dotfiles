@@ -55,6 +55,10 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
+# Disable the input source switching popup
+# https://stackoverflow.com/questions/77248249/disable-macos-sonoma-text-insertion-point-cursor-caps-lock-indicator
+defaults write kCFPreferencesAnyApplication TSMLanguageIndicatorEnabled 0
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input #
 ###############################################################################
