@@ -12,27 +12,18 @@ if [ "$system_type" = "Darwin" ]; then
 
 fi
 
-# iterm
+# iterm2
 # ref: https://shyr.io/blog/sync-iterm2-configs
 defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.config/iterm2"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
-# Activate fish
-echo "Activate fish"
-echo $(which fish) | sudo tee -a /etc/shells > /dev/null
-chsh -s $(which fish)
 
-# Install volta
-fish -c 'curl https://get.volta.sh | bash'
+# Install Volta and deps
+brew install volta
 
-fish -c 'source $HOME/.config/fish/config.fish'
+volta install node
+volta install yarn
+volta install fkill-cli
 
-fish -c 'volta install node'
-fish -c 'volta install yarn'
-
-# Install fisher
-fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
-fish -c 'fisher update'
-
-# Install topics
-fish -c 'dft install'
+# Activate zsh
+chsh -s $(which zsh)
