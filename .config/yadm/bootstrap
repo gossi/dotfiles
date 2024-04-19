@@ -25,5 +25,8 @@ volta install node
 volta install yarn
 volta install fkill-cli
 
+# reload bat with themes
+bat cache --build
+
 # Activate zsh
 chsh -s $(which zsh)
