@@ -11,7 +11,7 @@
 [user]
 	name = gossi
 	email = gossi@users.noreply.github.com
-	signingkey = /Users/thomas/.ssh/id_rsa.pub
+	signingkey = ~/.ssh/id_rsa.pub
 [credential]
 	helper = osxkeychain
 [init]
