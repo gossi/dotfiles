@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # config
 export DFT_HOME="${DFT_HOME:=$HOME/.config/dft}"
 export DFTFILE="${DFTFILE:=$DFT_HOME/dftfile}"
@@ -127,13 +125,9 @@ __dft_help() {
     echo ""
 }
 
-ProgName=$(basename $0)
-
-
 dft() {
     subcommand=$1
 
-    echo "subcommand: $subcommand"
     case $subcommand in
         "" | "-h" | "--help")
             __dft_help
@@ -143,7 +137,7 @@ dft() {
             __dft_${subcommand} $@
             if [ $? = 127 ]; then
                 echo "Error: '$subcommand' is not a known subcommand." >&2
-                echo "       Run '$ProgName --help' for a list of known subcommands." >&2
+                echo "       Run 'dft --help' for a list of known subcommands." >&2
                 exit 1
             fi
             ;;

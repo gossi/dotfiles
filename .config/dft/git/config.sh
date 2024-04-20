@@ -8,7 +8,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_rsa
 # Alias
 # -----------------
 
-alias git=hub
+#alias git=hub
 alias gs='git status'
 alias gco='git checkout'
 alias gb='git branch'

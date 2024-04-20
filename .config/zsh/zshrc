@@ -1,7 +1,6 @@
 eval "$(starship init zsh)"
 eval "$(sheldon source)"
 
-
 # ---- FZF -----
 
 # Set up fzf key bindings and fuzzy completion
@@ -9,7 +8,6 @@ eval "$(fzf --zsh)"
 
 # bind alt-c on a mac
 bindkey "ç" fzf-cd-widget
-
 
 # --- setup fzf theme ---
 
@@ -72,5 +70,7 @@ export PNPM_HOME="$HOME/Library/pnpm/"
 # end
 
 
-# --- Aliases ---
+# --- More Configs ---
 source ~/.config/zsh/alias.sh
+
+source ~/.config/zsh/completion.zsh
