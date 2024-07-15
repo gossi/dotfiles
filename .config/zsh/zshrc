@@ -62,6 +62,9 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export VOLTA_FEATURE_PNPM=1
 
+# --- mise ---
+eval "$(mise activate zsh)"
+
 
 # --- pnpm ---
 export PNPM_HOME="$HOME/Library/pnpm/"
@@ -74,3 +77,7 @@ export PNPM_HOME="$HOME/Library/pnpm/"
 source ~/.config/zsh/alias.sh
 
 source ~/.config/zsh/completion.zsh
+
+if [[ -f  ~/.zshrc.private ]]; then
+  source ~/.zshrc.private
+fi
