@@ -40,4 +40,7 @@ alias help="tldr"
 
 # pnpm
 alias pn=pnpm
-alias pnx='pnpm dlx'
+alias pnx="pnpm dlx"
+alias pp=pnpm
+alias ppx="pnpm dlx"
+
