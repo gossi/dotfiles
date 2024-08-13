@@ -5,6 +5,5 @@ macos
 node
 ruby
 rust
-rbenv
 editors
 direnv
