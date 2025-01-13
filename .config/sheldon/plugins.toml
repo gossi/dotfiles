@@ -23,6 +23,7 @@ github = "romkatv/zsh-defer"
 
 [templates]
 defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+PATHbin = 'export PATH="{{ dir }}/bin:$PATH"'
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
@@ -34,6 +35,10 @@ apply = ["defer"]
 
 [plugins.fzf-git]
 github = "junegunn/fzf-git.sh"
+
+[plugins.tmuxifier]
+github = "jimeh/tmuxifier"
+apply = ["PATHbin"]
 
 # Completion plugins, see (zsh/completion.zsh for more info)
 

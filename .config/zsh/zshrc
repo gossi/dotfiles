@@ -65,12 +65,19 @@ export VOLTA_FEATURE_PNPM=1
 # --- mise ---
 eval "$(mise activate zsh)"
 
+# --- tmuxifier ---
+eval "$(tmuxifier init -)"
+
 
 # --- pnpm ---
 export PNPM_HOME="$HOME/Library/pnpm/"
-# if not string match -q -- $PNPM_HOME $PATH
-#     set -gx PATH "$PNPM_HOME" $PATH
-# end
+if ! echo $PATH | grep -q "(^|:)$PNPM_HOME($|:)" ; then
+  export PATH="$PATH:$PNPM_HOME"
+fi
+
+#if not string match -q -- $PNPM_HOME $PATH
+#    set -gx PATH "$PNPM_HOME" $PATH
+#end
 
 
 # --- More Configs ---
