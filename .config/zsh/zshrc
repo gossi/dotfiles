@@ -53,14 +53,8 @@ _fzf_comprun() {
 }
 
 
-# ---- Zoxide (better cd) ----
+# --- Zoxide (better cd) ---
 eval "$(zoxide init zsh)"
-
-
-# --- volta ---
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export VOLTA_FEATURE_PNPM=1
 
 # --- proto ---
 export PROTO_HOME="$HOME/.proto";
@@ -68,7 +62,6 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
 
 # --- tmuxifier ---
 eval "$(tmuxifier init -)"
-
 
 # --- pnpm ---
 export PNPM_HOME="$HOME/Library/pnpm/"
