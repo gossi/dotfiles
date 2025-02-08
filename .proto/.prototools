@@ -1,0 +1,13 @@
+node = "23.7.0"
+npm = "bundled"
+
+[tools.node]
+bundled-npm = true
+
+[tools.npm]
+shared-globals-dir = true
+
+[settings]
+auto-clean = true
+auto-install = true
+telemetry = false
