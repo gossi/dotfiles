@@ -394,7 +394,7 @@
         }
       },
       "to": {
-        "key_code": "p"
+        "key_code": "w"
       },
       "type": "basic"
     },
@@ -897,7 +897,7 @@
         }
       },
       "to": {
-        "key_code": "w"
+        "key_code": "p"
       },
       "type": "basic"
     },
