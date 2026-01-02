@@ -1,0 +1,30 @@
+{
+  "description": "Disable all Option or Option + Shift Keys",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "any": "key_code",
+        "modifiers": {
+          "mandatory": ["left_option"],
+          "optional": "left_shift"
+        }
+      },
+      "to": [
+        {
+          "key_code": "vk_none"
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}

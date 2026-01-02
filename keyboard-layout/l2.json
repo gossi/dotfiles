@@ -1,0 +1,467 @@
+{
+  "description": "Noted (L2)",
+  "manipulators": [
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "non_us_backslash",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "v",
+        "modifiers": "option"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "1",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "open_bracket",
+        "modifiers": ["option", "shift"]
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "2",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "3",
+        "modifiers": "shift"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "3",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "vk_none"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "4",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "q",
+        "modifiers": ["option", "shift"]
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "5",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "q",
+        "modifiers": "option"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "6",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "4",
+        "modifiers": "shift"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "7",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "e",
+        "modifiers": ["option"]
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "8",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "non_us_backslash",
+        "modifiers": ["option"]
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "9",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "2",
+        "modifiers": ["option", "shift"]
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "0",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "vk_none"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "hyphen",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "slash",
+        "modifiers": ["option", "shift"]
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "equal_sign",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "r",
+        "modifiers": ["option", "shift"]
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "close_bracket",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "vk_none"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "backslash",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "n",
+        "modifiers": "option"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "c",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": [
+        {
+          "key_code": "open_bracket",
+          "modifiers": "shift"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "v",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": [
+        {
+          "key_code": "quote",
+          "modifiers": "shift"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "b",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": [
+        {
+          "key_code": "semicolon",
+          "modifiers": "shift"
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "comma",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "slash"
+      },
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "input_sources": [
+            {
+              "input_source_id": "^com\\.apple\\.keylayout\\.German$"
+            }
+          ],
+          "type": "input_source_if"
+        }
+      ],
+      "from": {
+        "key_code": "period",
+        "modifiers": {
+          "mandatory": "shift"
+        }
+      },
+      "to": {
+        "key_code": "open_bracket",
+        "modifiers": "option"
+      },
+      "type": "basic"
+    }
+  ]
+}
