@@ -1,1 +1,7 @@
 --target=~
+--ignore=install.sh
+--ignore=update.sh
+--ignore=uninstall.sh
+--ignore=config.zsh
+--ignore=config.sh
+--ignore=config.fish
