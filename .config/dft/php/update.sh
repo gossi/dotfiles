@@ -1,1 +1,0 @@
-composer global update

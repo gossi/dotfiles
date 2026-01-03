@@ -1,0 +1,9 @@
+[submodule "tmux/.config/tmux/plugins/catppuccin"]
+	path = tmux/.config/tmux/plugins/catppuccin
+	url = https://github.com/catppuccin/tmux
+[submodule "tmux/.config/tmux/plugins/tpm"]
+	path = tmux/.config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/.config/tmux/plugins/tmuxifier"]
+	path = tmux/.config/tmux/plugins/tmuxifier
+	url = https://github.com/jimeh/tmuxifier

@@ -1,0 +1,1 @@
+proto uninstall rust
