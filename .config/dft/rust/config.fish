@@ -1,2 +1,0 @@
-pathadd ~/.cargo/bin
-
