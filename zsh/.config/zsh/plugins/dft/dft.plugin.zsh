@@ -1,6 +1,7 @@
 # config
-export DFT_HOME="${DFT_HOME:=$HOME/.config/dft}"
-export DFTFILE="${DFTFILE:=$DFT_HOME/dftfile}"
+export DFT_HOME="${DFT_HOME:=$HOME/dotfiles}"
+export DFT_CONFIG="${DFT_CONFIG:=$HOME/.config/dft}"
+export DFTFILE="${DFTFILE:=$DFT_CONFIG/dftfile}"
 
 ## Utils
 
@@ -8,17 +9,18 @@ __dft_source() {
     local topic=$1
     local script=$2
 
-    local shellScript=${DFT_HOME}/${topic}/${script}.sh
+    local scripts=(
+      ${DFT_HOME}/${topic}/${script}.sh
+      ${DFT_HOME}/${topic}/${script}.zsh
+      ${DFT_HOME}/${topic}/scripts/${script}.sh
+      ${DFT_HOME}/${topic}/scripts/${script}.zsh
+    )
 
-    if [[ -f $shellScript ]]; then
-        source $shellScript
-    fi
-
-    local zshScript=${DFT_HOME}/${topic}/${script}.zsh
-
-    if [[ -f $zshScript ]]; then
-        source $zshScript
-    fi
+    for script in $scripts; do
+      if [[ -f $script ]]; then
+        source $script
+      fi
+    done
 }
 
 __dft_persist_topic() {
@@ -29,7 +31,36 @@ __dft_persist_topic() {
     fi
 }
 
+__dft_completion() {
+    local commands="init ls install uninstall update reload help"
+    if [[ "${BASH_VERSINFO}" != "" ]]; then
+        # Bash completion
+        COMPREPLY=($(compgen -W "${commands}" "${COMP_WORDS[1]}"))
+    else
+        # Zsh completion
+        compadd -- ${commands}
+    fi
+}
+
 ## Comands
+
+__dft_init() {
+  /bin/cat <<- 'EOF'
+  # completion
+  compdef __dft_completion dft
+  
+  touch $DFTFILE
+
+  # load topic config files
+  if  [[ -f $DFTFILE ]]; then
+    local topics=($(/bin/cat $DFTFILE))
+
+    for topic in $topics; do
+        __dft_source $topic "config"
+    done
+  fi
+EOF
+}
 
 # install DFTFILE topic(s)
 __dft_install() {
@@ -144,14 +175,3 @@ dft() {
     esac
 }
 
-
-## Init
-
-# load topic config files
-if  [[ -f $DFTFILE ]]; then
-    local topics=($(/bin/cat $DFTFILE))
-
-    for topic in $topics; do
-        __dft_source $topic "config"
-    done
-fi
