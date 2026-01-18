@@ -1,4 +1,63 @@
 theme = catppuccin-macchiato
+confirm-close-surface = false
+maximize = true
+
+# title bar and window
+macos-titlebar-proxy-icon = hidden
+macos-window-buttons = hidden
+title = " "
+shell-integration-features = no-title
+
+# option key. Right option key is used for keybindings on neo keyboard layout through karabiner
 keybind = alt+left=unbind
 keybind = alt+right=unbind
 macos-option-as-alt = right
+
+# unbind ghostty cmd, to map them to tmux
+keybind = cmd+n=unbind
+keybind = cmd+t=unbind
+keybind = cmd+w=unbind
+
+keybind = cmd+digit_1=unbind
+keybind = cmd+digit_2=unbind
+keybind = cmd+digit_3=unbind
+keybind = cmd+digit_4=unbind
+keybind = cmd+digit_5=unbind
+keybind = cmd+digit_6=unbind
+keybind = cmd+digit_7=unbind
+keybind = cmd+digit_8=unbind
+keybind = cmd+digit_9=unbind
+
+keybind = cmd+d=unbind
+keybind = cmd+D=unbind
+keybind = cmd+alt+ArrowLeft=unbind
+keybind = cmd+alt+ArrowDown=unbind
+keybind = cmd+alt+ArrowUp=unbind
+keybind = cmd+alt+ArrowRight=unbind
+
+# window management
+# This will map to M-<num> respectively
+keybind = cmd+1=esc:1
+keybind = cmd+2=esc:2
+keybind = cmd+3=esc:3
+keybind = cmd+4=esc:4
+keybind = cmd+5=esc:5
+keybind = cmd+6=esc:6
+keybind = cmd+7=esc:7
+keybind = cmd+8=esc:8
+keybind = cmd+9=esc:9
+
+# F1 - F3
+keybind = cmd+n=text:\x1bOP
+keybind = cmd+t=text:\x1bOQ
+keybind = cmd+w=text:\x1bOR
+
+# pane management (F4 - F10)
+keybind = cmd+d=text:\x1bOS
+keybind = cmd+shift+d=text:\x1b[15~
+keybind = cmd+alt+ArrowLeft=text:\x1b[17~
+keybind = cmd+alt+ArrowDown=text:\x1b[18~
+keybind = cmd+alt+ArrowUp=text:\x1b[19~
+keybind = cmd+alt+ArrowRight=text:\x1b[20~
+keybind = cmd+shift+Enter=text:\x1b[21~
+

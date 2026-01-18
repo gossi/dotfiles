@@ -51,3 +51,5 @@ source ~/.config/zsh/completion.zsh
 if [[ -f  ~/.zshrc.private ]]; then
   source ~/.zshrc.private
 fi
+
+source ~/.config/zsh/auto-tmux.zsh

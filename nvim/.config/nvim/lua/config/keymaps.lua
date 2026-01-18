@@ -1,10 +1,45 @@
--- navigation
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+local map = vim.keymap.set
 
-vim.keymap.set("n", "<M-left>", ":wincmd h<CR>", { silent = true })
-vim.keymap.set("n", "<M-up>", ":wincmd j<CR>", { silent = true })
-vim.keymap.set("n", "<M-down>", ":wincmd k<CR>", { silent = true })
-vim.keymap.set("n", "<M-right>", ":wincmd l<CR>", { silent = true })
+-- 
+map({ "n", "v" }, "ä", "<cmd>q<cr>", { desc = "quit" })
+map({ "n", "v" }, "ü", ":w<cr>", { desc = "save" })
+
+-- navigation
+-- map("n", "<leader>pv", vim.cmd.Ex)
+
+map("n", "<M-left>", ":wincmd h<CR>", { silent = true })
+map("n", "<M-up>", ":wincmd j<CR>", { silent = true })
+map("n", "<M-down>", ":wincmd k<CR>", { silent = true })
+map("n", "<M-right>", ":wincmd l<CR>", { silent = true })
 
 -- misc
-vim.keymap.set("i", "tt", "<ESC>", { silent = true })
+map("i", "tn", "<ESC>", { silent = true })
+
+-- quit
+map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
+
+-- better indenting
+map("v", ">", ">gv", { desc = ">, keep selection when indenting" })
+map("v", "<", "<gv", { desc = "<, keep selection when indenting" })
+map("v", "=", "=gv", { desc = "=, keep selection when indenting" })
+
+-- Toggle a specific character at the end of the current line
+local function toggle_char_at_eol(target_char)
+  local line_content = vim.api.nvim_get_current_line()
+
+  if line_content:sub(-1) == target_char then
+    -- Remove the character if it's at the end
+    vim.api.nvim_set_current_line(line_content:sub(1, -2))
+  else
+    -- Add the character at the end
+    vim.api.nvim_set_current_line(line_content .. target_char)
+  end
+end
+
+map("n", "<leader>,", function()
+  toggle_char_at_eol(",")
+end, { desc = "toggle , at end of line" })
+map("n", "<leader>;", function()
+  toggle_char_at_eol(";")
+end, { desc = "toggle ; at end of line" })
+

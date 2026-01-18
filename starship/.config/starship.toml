@@ -11,6 +11,7 @@ $git_branch\
 $git_status\
 [](fg:green bg:teal)\
 $c\
+$elixir\
 $rust\
 $golang\
 $nodejs\
@@ -20,6 +21,7 @@ $kotlin\
 $haskell\
 $python\
 $ruby\
+$direnv\
 [](fg:teal)\
 $line_break$character"""
 
@@ -167,6 +169,17 @@ format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[elixir]
+symbol = '🔮'
+style = "bg:teal"
+format = '[[ $symbol( $version \(OTP $otp_version\) ) ](fg:base bg:teal)]($style)'
+
+[direnv]
+disabled = false
+symbol = " direnv"
+style = "bg:teal"
+format = '[[ $symbol: $loaded/$allowed ](fg:base bg:teal)]($style)'
 
 [docker_context]
 symbol = ""

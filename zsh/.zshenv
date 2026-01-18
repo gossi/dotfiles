@@ -1,3 +1,8 @@
+# -- system --
+
+export EDITOR="nvim"
+export VISUAL="nvim"
+
 # -- fzf --
 
 # fzf theme
@@ -13,5 +18,7 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# -- extensions --
 
 . "$HOME/.cargo/env"
