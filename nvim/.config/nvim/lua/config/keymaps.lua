@@ -43,3 +43,11 @@ map("n", "<leader>;", function()
   toggle_char_at_eol(";")
 end, { desc = "toggle ; at end of line" })
 
+-- Move Lines
+map("n", "<M-down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+map("n", "<M-up>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+map("i", "<M-down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+map("i", "<M-up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+map("v", "<M-down>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+map("v", "<M-up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+
