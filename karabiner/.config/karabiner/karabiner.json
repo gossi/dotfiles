@@ -133,25 +133,6 @@
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "from": { "key_code": "c" },
-                                "to": {
-                                    "key_code": "v",
-                                    "modifiers": ["left_command"]
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "neo2_mod_4",
-                                        "type": "variable_unless",
-                                        "value": 0
-                                    },
-                                    {
-                                        "input_sources": [{ "input_source_id": "^com\\.apple\\.keylayout\\.German$" }],
-                                        "type": "input_source_if"
-                                    }
-                                ],
                                 "from": { "key_code": "b" },
                                 "to": {
                                     "key_code": "z",
@@ -912,6 +893,25 @@
                                     "modifiers": { "optional": ["control", "option", "command"] }
                                 },
                                 "to": { "key_code": "tab" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "neo2_mod_4",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "input_sources": [{ "input_source_id": "^com\\.apple\\.keylayout\\.German$" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "optional": ["control", "option", "command"] }
+                                },
+                                "to": { "key_code": "escape" },
                                 "type": "basic"
                             },
                             {
