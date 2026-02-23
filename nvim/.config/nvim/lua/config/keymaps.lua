@@ -1,6 +1,10 @@
+-- inspiration:
+-- https://btj93.github.io/nvim-keymap-essentials
+-- https://github.com/fdietze/dotfiles/blob/master/.config/nvim/lua/config/keymaps.lua
+
 local map = vim.keymap.set
 
--- 
+--
 map({ "n", "v" }, "ä", "<cmd>q<cr>", { desc = "quit" })
 map({ "n", "v" }, "ü", ":w<cr>", { desc = "save" })
 
@@ -43,6 +47,12 @@ map("n", "<leader>;", function()
   toggle_char_at_eol(";")
 end, { desc = "toggle ; at end of line" })
 
+-- folding
+ufo = require('ufo')
+map('n', 'zR', ufo.openAllFolds)
+map('n', 'zM', ufo.closeAllFolds)
+
+
 -- Move Lines
 map("n", "<M-down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
 map("n", "<M-up>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
@@ -51,3 +61,36 @@ map("i", "<M-up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 map("v", "<M-down>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
 map("v", "<M-up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
+-- highlighting
+map("n", "h", "<cmd>let @/ = expand('<cword>')<cr>:set hls<cr>", { desc = "highlight word under cursor" }) -- todo: toggle
+map("n", "<leader>/", "<cmd>nohls<cr>", { desc = "clear search highlight" })
+
+-- search
+map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]], { desc = "Search and replace word under cursor" })
+
+-- commenting
+local function duplicate_and_comment()
+  -- Exit visual mode
+  local esc = vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+  vim.api.nvim_feedkeys(esc, "x", false)
+
+  -- Get selection range
+  local start_line = vim.fn.line("'<")
+  local end_line = vim.fn.line("'>")
+
+  -- Yank and paste below
+  vim.cmd(start_line .. "," .. end_line .. "yank")
+  vim.cmd((end_line + 1) .. "put")
+
+  -- Reselect pasted block
+  vim.api.nvim_feedkeys("gv", "n", false)
+
+  -- Comment the original selection
+  vim.api.nvim_feedkeys("gc", "v", false)
+end
+
+vim.keymap.set("v", "yc", duplicate_and_comment, { noremap = true, desc = "Duplicate selection and comment original" })
+
+-- toggles
+Snacks.toggle.option("spell", { name = "Spelling" }):map("<leader>us")
+Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
