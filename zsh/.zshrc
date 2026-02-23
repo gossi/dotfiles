@@ -40,16 +40,20 @@ _fzf_comprun() {
 # --- Zoxide (better cd) ---
 eval "$(zoxide init zsh)"
 
-# --- DFT ---
-eval "$(dft init)"
-
-# --- More Configs ---
+# --- ZSH Configs ---
 source ~/.config/zsh/alias.sh
 
 source ~/.config/zsh/completion.zsh
 
+# --- DFT ---
+eval "$(dft init)"
+
+# --- Private contributions ---
+
 if [[ -f  ~/.zshrc.private ]]; then
   source ~/.zshrc.private
 fi
+
+# --- start in tmux ---
 
 source ~/.config/zsh/auto-tmux.zsh
