@@ -1,4 +1,4 @@
-node = "23.7.0"
+node = "~24"
 npm = "bundled"
 pnpm = "10.2.1"
 proto = "0.50.0"
