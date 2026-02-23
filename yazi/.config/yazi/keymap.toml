@@ -1,0 +1,8 @@
+[mgr]
+
+append_keymap = [
+	{ on = "ä", run = "quit", desc = "Quit the process" },
+
+  # Goto
+	{ on = [ "g", "p" ], run = "cd ~/code", desc = "Go to projects" },
+]
