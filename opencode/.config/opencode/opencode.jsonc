@@ -1,0 +1,25 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["opencode-lmstudio@latest"],
+  "default_agent": "researcher",  
+  "agent": {
+    "build": {
+      "color": "error"
+    },
+    "plan": {
+      "color": "warning"
+    },
+    "researcher": {
+      "color": "success"
+    }
+  },
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (local)",
+      "options": {
+        "baseURL": "http://localhost:1234/v1"
+      }
+    }
+  }
+}
