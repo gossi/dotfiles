@@ -16,9 +16,6 @@ map("n", "<M-up>", ":wincmd j<CR>", { silent = true })
 map("n", "<M-down>", ":wincmd k<CR>", { silent = true })
 map("n", "<M-right>", ":wincmd l<CR>", { silent = true })
 
--- misc
-map("i", "tn", "<ESC>", { silent = true })
-
 -- quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit All" })
 
@@ -29,29 +26,28 @@ map("v", "=", "=gv", { desc = "=, keep selection when indenting" })
 
 -- Toggle a specific character at the end of the current line
 local function toggle_char_at_eol(target_char)
-  local line_content = vim.api.nvim_get_current_line()
+	local line_content = vim.api.nvim_get_current_line()
 
-  if line_content:sub(-1) == target_char then
-    -- Remove the character if it's at the end
-    vim.api.nvim_set_current_line(line_content:sub(1, -2))
-  else
-    -- Add the character at the end
-    vim.api.nvim_set_current_line(line_content .. target_char)
-  end
+	if line_content:sub(-1) == target_char then
+		-- Remove the character if it's at the end
+		vim.api.nvim_set_current_line(line_content:sub(1, -2))
+	else
+		-- Add the character at the end
+		vim.api.nvim_set_current_line(line_content .. target_char)
+	end
 end
 
 map("n", "<leader>,", function()
-  toggle_char_at_eol(",")
+	toggle_char_at_eol(",")
 end, { desc = "toggle , at end of line" })
 map("n", "<leader>;", function()
-  toggle_char_at_eol(";")
+	toggle_char_at_eol(";")
 end, { desc = "toggle ; at end of line" })
 
 -- folding
-ufo = require('ufo')
-map('n', 'zR', ufo.openAllFolds)
-map('n', 'zM', ufo.closeAllFolds)
-
+ufo = require("ufo")
+map("n", "zR", ufo.openAllFolds)
+map("n", "zM", ufo.closeAllFolds)
 
 -- Move Lines
 map("n", "<M-down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
@@ -70,23 +66,23 @@ map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]], { desc = "Search an
 
 -- commenting
 local function duplicate_and_comment()
-  -- Exit visual mode
-  local esc = vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
-  vim.api.nvim_feedkeys(esc, "x", false)
+	-- Exit visual mode
+	local esc = vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+	vim.api.nvim_feedkeys(esc, "x", false)
 
-  -- Get selection range
-  local start_line = vim.fn.line("'<")
-  local end_line = vim.fn.line("'>")
+	-- Get selection range
+	local start_line = vim.fn.line("'<")
+	local end_line = vim.fn.line("'>")
 
-  -- Yank and paste below
-  vim.cmd(start_line .. "," .. end_line .. "yank")
-  vim.cmd((end_line + 1) .. "put")
+	-- Yank and paste below
+	vim.cmd(start_line .. "," .. end_line .. "yank")
+	vim.cmd((end_line + 1) .. "put")
 
-  -- Reselect pasted block
-  vim.api.nvim_feedkeys("gv", "n", false)
+	-- Reselect pasted block
+	vim.api.nvim_feedkeys("gv", "n", false)
 
-  -- Comment the original selection
-  vim.api.nvim_feedkeys("gc", "v", false)
+	-- Comment the original selection
+	vim.api.nvim_feedkeys("gc", "v", false)
 end
 
 vim.keymap.set("v", "yc", duplicate_and_comment, { noremap = true, desc = "Duplicate selection and comment original" })
