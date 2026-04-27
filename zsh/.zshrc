@@ -45,6 +45,10 @@ source ~/.config/zsh/alias.sh
 
 source ~/.config/zsh/completion.zsh
 
+if [[-f $HOME/.local/bin ]]; then
+  export PATH="$PATH:$HOME/.local/bin"
+fi
+
 # --- DFT ---
 eval "$(dft init)"
 
@@ -57,3 +61,4 @@ fi
 # --- start in tmux ---
 
 source ~/.config/zsh/auto-tmux.zsh
+
