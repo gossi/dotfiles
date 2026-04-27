@@ -1,0 +1,2 @@
+eval "$(esdm completion zsh)"
+
