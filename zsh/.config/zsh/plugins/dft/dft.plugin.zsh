@@ -113,7 +113,7 @@ __dft_reload() {
     fi
 }
 
-__dft_uninstall_topic() {
+__dft_uninstall() {
     local topic=$1
 
     # run uninstaller
@@ -123,7 +123,7 @@ __dft_uninstall_topic() {
     local topics=($(/bin/cat $DFTFILE))
 
     # erase file
-    true >$DFTFILE
+    truncate -s 0 $DFTFILE
 
     for t in $topics; do
         if [ $t != $topic ]; then
