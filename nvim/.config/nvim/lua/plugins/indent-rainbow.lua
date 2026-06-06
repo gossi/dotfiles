@@ -1,11 +1,6 @@
-return {
-  "lukas-reineke/indent-blankline.nvim",
-  main = "ibl",
-  opts = function(_, opts)
-    -- Other blankline configuration here
-    return require("indent-rainbowline").make_opts(opts)
-  end,
-  dependencies = {
-    "TheGLander/indent-rainbowline.nvim",
-  },
-}
+vim.pack.add({
+	"https://github.com/TheGLander/indent-rainbowline.nvim",
+	"https://github.com/lukas-reineke/indent-blankline.nvim",
+})
+
+require("ibl").setup(require("indent-rainbowline").make_opts())

@@ -1,14 +1,4 @@
-return {
-	-- {
-	--   'vidocqh/auto-indent.nvim',
-	--   opts = {},
-	-- }
-	{
-		"m4xshen/autoclose.nvim",
-		opts = {},
-	},
-	{
-		"windwp/nvim-ts-autotag",
-		opts = {},
-	},
-}
+vim.pack.add({
+	"https://github.com/m4xshen/autoclose.nvim",
+	"https://github.com/windwp/nvim-ts-autotag",
+})

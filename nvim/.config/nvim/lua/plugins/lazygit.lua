@@ -1,20 +1,27 @@
-return {
-	"kdheepak/lazygit.nvim",
-	lazy = true,
-	cmd = {
-		"LazyGit",
-		"LazyGitConfig",
-		"LazyGitCurrentFile",
-		"LazyGitFilter",
-		"LazyGitFilterCurrentFile",
-	},
-	-- optional for floating window border decoration
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	},
-	-- setting the keybinding for LazyGit with 'keys' is recommended in
-	-- order to load the plugin when the command is run for the first time
-	keys = {
-		{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
-	},
-}
+vim.pack.add({
+	"https://github.com/nvim-lua/plenary.nvim",
+	"https://github.com/kdheepak/lazygit.nvim",
+})
+
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+
+-- return {
+-- 	"kdheepak/lazygit.nvim",
+-- 	lazy = true,
+-- 	cmd = {
+-- 		"LazyGit",
+-- 		"LazyGitConfig",
+-- 		"LazyGitCurrentFile",
+-- 		"LazyGitFilter",
+-- 		"LazyGitFilterCurrentFile",
+-- 	},
+-- 	-- optional for floating window border decoration
+-- 	dependencies = {
+-- 		"nvim-lua/plenary.nvim",
+-- 	},
+-- 	-- setting the keybinding for LazyGit with 'keys' is recommended in
+-- 	-- order to load the plugin when the command is run for the first time
+-- 	keys = {
+-- 		{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+-- 	},
+-- }
