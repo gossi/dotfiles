@@ -1,0 +1,146 @@
+[metadata]
+name = "tmux-sessions"
+description = "Browse tmux sessions with window tree preview"
+requirements = ["tmux", "gum"]
+
+[source]
+command = [
+  { name = "Tmux",       run = "tmux list-sessions -F ' #{session_name}'" },
+  { name = "Tmuxifier",  run = "find ~/.config/tmux/layouts -name '*.session.sh' -maxdepth 1 | xargs -n1 basename -s .session.sh | sed 's/^/ /'" },
+  { name = "Sesh Zoxide", run = "sesh list -z | head -25 | sed 's/^/ /'" },
+]
+display = "{}"
+output = "{split: :1}"
+no_sort = true
+frecency = false
+
+[preview]
+command = '''
+bash -c '
+item="${1#* }"
+echo ""
+
+# --- case 1: path (zoxide) ---
+if echo "$item" | grep -qE "^(/|~)"; then
+  sesh preview "$item" 2>/dev/null || ls -la "$item"
+  exit
+fi
+
+# --- case 2: tmux session ---
+if tmux has-session -t "$item" 2>/dev/null; then
+  s="$item"
+  root=$(tmux display-message -p -t "$s" "#{pane_current_path}")
+  wins=$(tmux display-message -p -t "$s" "#{session_windows}")
+  panes=$(tmux display-message -p -t "$s" "#{session_panes}")
+  echo "  Current Path: $root"
+  echo ""
+  tmux lsw -t "$s" -F "#{window_index}|#{window_name}|#{window_flags}|#{window_panes}" | \
+  while IFS="|" read -r idx name flags pcount; do
+    echo "  $idx: $name $flags ($pcount panes)"
+    while IFS="|" read -r pidx cmd active; do
+      mark=""; [ "$active" = "1" ] && mark=" ◀"
+      echo "      $pidx: $cmd$mark"
+    done < <(tmux lsp -t "$s:$idx" -F "#{pane_index}|#{pane_current_command}|#{pane_active}" 2>/dev/null)
+  done
+  exit
+fi
+
+# --- case 3: tmuxifier ---
+layout="$HOME/.config/tmux/layouts/$item.session.sh"
+if [ -f "$layout" ]; then
+  grep -E "^[[:space:]]*(session_root|new_window|window_root|split_h|split_v|run_cmd|select_pane)" "$layout" | \
+  sed "s/^[[:space:]]*//" | \
+  sed "s/session_root \"\(.*\)\"/   \1/" | \
+  sed "s/new_window \"\(.*\)\"/     \1/" | \
+  sed "s/window_root \"\(.*\)\"/       \1/" | \
+  sed "s/split_h \([0-9]*\)/       split \1%/" | \
+  sed "s/split_v \([0-9]*\)/       split \1%/" | \
+  sed "s/run_cmd \"\(.*\)\"/       \1/" | \
+  sed "s/select_pane \([0-9]*\)/      ▶ pane \1/"
+  exit
+fi
+' -- '{}'
+'''
+
+[keybindings]
+shortcut = "f4"
+enter = "actions:connect"
+ctrl-d = [ "actions:kill", "reload_source" ]
+ctrl-r = [ "actions:rename", "reload_source" ]
+
+[actions.connect]
+description = "Connect / Load / Sesh connect"
+command = '''
+bash -c '
+item="$1"
+item="${item#* }"
+echo "$item"
+if echo "$item" | grep -qE "^(/|~)"; then
+  sesh connect "$item"
+elif tmux has-session -t "$item" 2>/dev/null; then
+  tmux switch-client -t "$item"
+elif [ -f "$HOME/.config/tmux/layouts/$item.session.sh" ]; then
+  tmuxifier load-session "$item"
+  session_name=$(grep "initialize_session \"" \
+    "$HOME/.config/tmux/layouts/$item.session.sh" | \
+    sed "s/.*initialize_session \"\(.*\)\".*/\1/")
+  tmux switch-client -t "$session_name"
+fi
+' -- '{}'
+'''
+mode = "execute"
+
+[actions.kill]
+description = "Kill selected tmux session"
+command = '''
+bash -c '
+item="$1"
+item="${item#* }"
+tmux kill-session -t "$item"
+' -- '{}'
+'''
+mode = "fork"
+
+[actions.rename]
+description = "Rename selected session"
+command = '''
+bash -c '
+item="$1"
+item="${item#* }"
+newname=$(gum input --no-show-help --placeholder "New name" --value "$item")
+[ -n "$newname" ] && tmux rename-session -t "$item" "$newname"
+tv tmux-sessions
+' -- '{}'
+'''
+mode = "execute"
+
+# Here are some tries to open a dialog to change the name in
+# They were unfortunately not working for one or the other reason
+# Ideally would still prefer a dialg in fork mode ;)
+
+# command = '''
+# tmux display-popup -E -w 40% -h 20% -T " Rename session " \
+#   "gum input --placeholder 'New name' --value '{}' | xargs -I{} tmux rename-session -t '{}' '{}'"
+# '''
+# command = '''
+# tmux command-prompt \
+#   -I '{}' \
+#   -p 'New name:' \
+#   'rename-session -t "{}" "%%"'
+# '''
+# command = '''
+# tmux display-popup -E -w 30% -h 5 -T " Rename session " \
+#   "gum input --placeholder 'New name' --value '{}' | xargs -I NEWNAME tmux rename-session -t '{}' NEWNAME"
+# '''
+# command = '''
+# bash -c '
+# popup_clients=$(tmux list-clients -F "#{client_tty}" 2>/dev/null | sort)
+# my_tty=$(tmux display-message -p "#{client_tty}" 2>/dev/null)
+# outer=$(echo "$popup_clients" | grep -v "$my_tty" | head -1)
+# [ -n "$outer" ] && \
+#   tmux send-keys -t "$outer" \
+#     "tmux command-prompt -I \"{}\" -p \"Rename:\" \"rename-session -t \\\"{}\\\" \\\"%%\\\"\"" Enter
+# '
+# '''
+# mode = "fork"
+
