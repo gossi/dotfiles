@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-lmstudio@latest"],
+  //"plugin": ["opencode-lmstudio@latest"],
   "default_agent": "researcher",  
   "agent": {
     "build": {
