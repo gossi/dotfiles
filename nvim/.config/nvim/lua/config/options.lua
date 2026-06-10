@@ -3,6 +3,7 @@ local opt = vim.opt
 
 opt.relativenumber = true
 opt.number = true
+opt.timeoutlen = 0 -- No delay in lazygit or opencode when hitting space
 
 -- Indentation
 opt.tabstop = 2 -- Tab width (prettier default)

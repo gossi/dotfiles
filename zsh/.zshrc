@@ -45,9 +45,11 @@ source ~/.config/zsh/alias.sh
 
 source ~/.config/zsh/completion.zsh
 
-if [[-f $HOME/.local/bin ]]; then
+local_bin="${HOME}/.local/bin"
+
+#if [[ -f ~/.local/bin ]]; then
   export PATH="$PATH:$HOME/.local/bin"
-fi
+#fi
 
 # --- DFT ---
 eval "$(dft init)"
