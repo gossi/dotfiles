@@ -33,7 +33,7 @@ prefix = "ctrl+t"
 goto = "prefix+space"
 # workspaces
 new_workspace = "cmd+n"
-switch_workspace = "cmd+shift+1..9"
+switch_workspace = "cmd+alt+1..9"
 # tabs
 new_tab = "cmd+t"
 switch_tab = "cmd+1..9"
