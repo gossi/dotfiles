@@ -1,6 +1,6 @@
 node = "~24"
 npm = "bundled"
-pnpm = "10.2.1"
+pnpm = "~12"
 proto = "0.50.0"
 rust = "stable"
 
