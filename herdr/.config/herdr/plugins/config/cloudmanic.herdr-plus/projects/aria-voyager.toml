@@ -1,0 +1,23 @@
+name = "Aria Voyager"
+group = "hokulea"
+working_dir = "~/code/hokulea/aria-voyager"
+
+[[tabs]]
+name = "root"
+
+[[tabs]]
+name = "aria-voyager"
+working_dir = "packages/aria-voyager"
+
+[[tabs]]
+name = "ember"
+working_dir = "packages/ember-aria-voyager"
+
+[[tabs.panes]]
+
+[[tabs.panes]]
+split = "right"
+
+[[tabs]]
+name = "svelte"
+working_dir = "packages/svelte-aria-voyager"

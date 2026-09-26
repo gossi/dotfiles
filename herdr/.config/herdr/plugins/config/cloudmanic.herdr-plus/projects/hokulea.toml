@@ -1,0 +1,39 @@
+name = "Hokulea"
+group = "hokulea"
+working_dir = "~/code/hokulea/hokulea"
+
+[[tabs]]
+name = "root"
+
+[[tabs]]
+name = "core"
+
+[[tabs.panes]]
+working_dir = "foundation/tokens"
+
+[[tabs.panes]]
+working_dir = "foundation/core"
+split = "right"
+
+[[tabs]]
+name = "ember"
+
+[[tabs.panes]]
+working_dir = "ember/test-app"
+
+[[tabs.panes]]
+working_dir = "ember/package"
+split = "right"
+
+[[tabs]]
+name = "theme"
+working_dir = "themes/moana"
+
+[[tabs]]
+name = "explorer"
+working_dir = "explorer"
+
+[[tabs.panes]]
+
+[[tabs.panes]]
+split = "right"

@@ -1,0 +1,24 @@
+name = "UniDancing"
+group = "gossi"
+working_dir = "~/code/gossi/unidancing"
+
+[[tabs]]
+name = "root"
+
+[[tabs]]
+name = "web"
+working_dir = "web"
+
+[[tabs]]
+name = "gatekeeper"
+working_dir = "gatekeeper"
+command = "pp dev"
+
+[[tabs]]
+name = "tina"
+working_dir = "web"
+command = "pp start:tina"
+
+[[tabs]]
+name = "theme"
+working_dir = "theme"

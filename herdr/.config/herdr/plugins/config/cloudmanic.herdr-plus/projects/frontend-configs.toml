@@ -1,0 +1,30 @@
+name = "Frontend Configs"
+group = "gossi"
+working_dir = "~/code/gossi/frontend-configs"
+
+[[tabs]]
+name = "root"
+
+[[tabs]]
+name = "eslint"
+working_dir = "packages/eslint"
+
+[[tabs]]
+name = "postcss"
+working_dir = "packages/postcss"
+
+[[tabs]]
+name = "prettier"
+working_dir = "packages/prettier"
+
+[[tabs]]
+name = "stylelint"
+working_dir = "packages/stylelint"
+
+[[tabs]]
+name = "template-lint"
+working_dir = "packages/template-lint"
+
+[[tabs]]
+name = "testing"
+working_dir = "testing"

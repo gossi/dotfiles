@@ -1,0 +1,10 @@
+name = "Ember Ability"
+group = "gossi"
+working_dir = "~/code/gossi/ember-ability"
+
+[[tabs]]
+name = "root"
+
+[[tabs]]
+name = "ember-ability"
+working_dir = "ember-ability"

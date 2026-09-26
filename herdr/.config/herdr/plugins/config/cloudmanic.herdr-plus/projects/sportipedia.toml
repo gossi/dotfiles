@@ -1,0 +1,31 @@
+name = "Sportipedia"
+group = "gossi"
+working_dir = "~/code/gossi/sportipedia"
+
+[[tabs]]
+name = "root"
+
+[[tabs]]
+name = "Services"
+
+[[tabs.panes]]
+working_dir = "services/api"
+
+[[tabs.panes]]
+working_dir = "services/auth"
+command = "pp dev"
+split = "right"
+
+[[tabs]]
+name = "Support"
+working_dir = "support"
+
+[[tabs]]
+name = "Apps"
+
+[[tabs.panes]]
+working_dir = "apps/admin"
+
+[[tabs.panes]]
+working_dir = "apps/catalog"
+split = "right"
