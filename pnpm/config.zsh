@@ -1,5 +1,6 @@
-export PNPM_HOME="$HOME/Library/pnpm/"
-if ! echo $PATH | grep -q "(^|:)$PNPM_HOME($|:)" ; then
-  export PATH="$PATH:$PNPM_HOME"
-fi
+export PNPM_HOME='/Users/thomas/Library/pnpm/'
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
 
