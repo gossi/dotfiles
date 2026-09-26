@@ -1,0 +1,28 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+*.agekey
+*.gpg
+*.enc
+credentials.json
+tokens.json
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Logs
+*.log
+
+# Local machine files
+*.local
+*.local.*
