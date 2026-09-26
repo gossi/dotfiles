@@ -153,12 +153,12 @@ ctrl-f = "cycle_previews"
 # Data operations
 # --------------
 ctrl-y = "copy_entry_to_clipboard"
-ctrl-r = "reload_source"
+#ctrl-r = "reload_source"
 alt-s = "cycle_sources"
 
 # UI Features
 # ----------
-ctrl-t = "toggle_remote_control"
+ctrl-r = "toggle_remote_control"
 ctrl-x = "toggle_action_picker"
 ctrl-o = "toggle_preview"
 ctrl-h = "toggle_help"
