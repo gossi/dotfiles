@@ -1,0 +1,57 @@
+onboarding = false
+
+[ui]
+prompt_new_tab_name = false
+
+[ui.toast]
+delivery = "off"
+
+# Catppuccin Macchiato blue overrides for Herdr's current custom token surface.
+[theme.custom]
+panel_bg = "#24273a" # Base
+sidebar_bg = "#1e2030" # Mantle
+active_row_bg = "#363a4f" # Surface0
+selection_bg = "#494d64" # Surface1
+surface0 = "#363a4f" # Surface0
+surface1 = "#494d64" # Surface1
+surface_dim = "#1e2030" # Mantle
+overlay0 = "#6e738d" # Overlay0
+overlay1 = "#8087a2" # Overlay1
+text = "#cad3f5" # Text
+subtext0 = "#a5adcb" # Subtext0
+accent = "#8aadf4" # Blue
+mauve = "#c6a0f6" # Mauve
+green = "#a6da95" # Green
+yellow = "#eed49f" # Yellow
+red = "#ed8796" # Red
+blue = "#8aadf4" # Blue
+teal = "#8bd5ca" # Teal
+peach = "#f5a97f" # Peach
+
+[keys]
+prefix = "ctrl+t"
+goto = "prefix+space"
+# workspaces
+new_workspace = "cmd+n"
+switch_workspace = "cmd+shift+1..9"
+# tabs
+new_tab = "cmd+t"
+switch_tab = "cmd+1..9"
+next_tab = "cmd+right"
+previous_tab = "cmd+left"
+# panes
+split_vertical = "cmd+d"
+split_horizontal = "cmd+shift+d"
+close_pane = "cmd+w"
+focus_pane_left = "cmd+alt+left"
+focus_pane_down = "cmd+alt+down"
+focus_pane_up = "cmd+alt+up"
+focus_pane_right = "cmd+alt+right"
+
+[[keys.command]]
+key = "prefix+g"
+type = "popup"
+command = "lazygit"
+description = "run lazygit"
+width = "90%"
+height = "90%"

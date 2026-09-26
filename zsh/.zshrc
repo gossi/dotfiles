@@ -60,7 +60,7 @@ if [[ -f  ~/.zshrc.private ]]; then
   source ~/.zshrc.private
 fi
 
-# --- start in tmux ---
+# --- start in herdr ---
 
-source ~/.config/zsh/auto-tmux.zsh
+source ~/.config/zsh/auto-herdr.zsh
 
