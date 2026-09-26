@@ -3,5 +3,8 @@
   "keybinds": {
     "leader": "alt+x",
     "variant.cycle": "ctrl+o"
+  },
+  "theme": {
+    "name": "catppuccin-macchiato"
   }
 }
