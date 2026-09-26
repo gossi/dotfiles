@@ -29,6 +29,11 @@ zstyle ':completion:*' menu select
 # Autocomplete options for cd instead of directory stack
 zstyle ':completion:*' complete-options true
 
+# ---
+# my aliases
+# ---
+
+compdef eza=ls
 
 
 # =========
