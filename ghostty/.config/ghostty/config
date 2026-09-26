@@ -42,6 +42,10 @@ keybind = cmd+D=unbind
 keybind = cmd+shift+d=unbind
 keybind = cmd+ArrowLeft=unbind
 keybind = cmd+ArrowRight=unbind
+keybind = cmd+shift+ArrowLeft=unbind
+keybind = cmd+shift+ArrowDown=unbind
+keybind = cmd+shift+ArrowUp=unbind
+keybind = cmd+shift+ArrowRight=unbind
 keybind = cmd+alt+ArrowLeft=unbind
 keybind = cmd+alt+ArrowDown=unbind
 keybind = cmd+alt+ArrowUp=unbind
