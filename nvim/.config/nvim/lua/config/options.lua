@@ -41,6 +41,31 @@ require("vim._core.ui2").enable()
 opt.winborder = "rounded"
 opt.pumborder = "rounded"
 
+vim.o.wildmode = "longest:full,full"
+vim.o.wildoptions = "pum"
+
+-- Native PUM keybindings (a11y-style: up/down to navigate, Enter/Space to confirm)
+vim.keymap.set("c", "<Down>", function()
+	return vim.fn.pumvisible() == 1 and "<C-n>" or "<Down>"
+end, { expr = true, noremap = true })
+
+vim.keymap.set("c", "<Up>", function()
+	return vim.fn.pumvisible() == 1 and "<C-p>" or "<Up>"
+end, { expr = true, noremap = true })
+
+vim.keymap.set("c", "<CR>", function()
+	return vim.fn.pumvisible() == 1 and "<C-y>" or "<CR>"
+end, { expr = true, noremap = true })
+
+vim.keymap.set("c", "<Space>", function()
+	return vim.fn.pumvisible() == 1 and "<C-y>" or "<Space>"
+end, { expr = true, noremap = true })
+
+-- Escape closes the pum without selecting
+vim.keymap.set("c", "<Esc>", function()
+	return vim.fn.pumvisible() == 1 and "<C-e>" or "<Esc>"
+end, { expr = true, noremap = true })
+
 -- File Types
 
 -- markdown

@@ -11,6 +11,21 @@ require("render-markdown").setup({
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
 	callback = function()
+		-- buffer-local: the plugin checks for these and skips its defaults (ht/hu/hT)
+		vim.keymap.set(
+			"n",
+			"<localleader>ht",
+			"<Plug>(MarkdownPlusOpenTocWindow)",
+			{ buffer = true, nowait = true, desc = "Toggle TOC window" }
+		)
+		vim.keymap.set(
+			"n",
+			"<localleader>hu",
+			"<Plug>(MarkdownPlusGenerateTOC)",
+			{ buffer = true, desc = "Generate TOC" }
+		)
+		vim.keymap.set("n", "<localleader>hT", "<Nop>", { buffer = true, desc = "superseded by <localleader>ht" })
+
 		require("markdown-plus").setup({
 			toc = {
 				initial_depth = 6,
@@ -20,4 +35,4 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.keymap.set("n", "<localleader>ht", "<Plug>(MarkdownPlusOpenTocWindow)")
-vim.keymap.set("n", "<locallader>hT", "<Plug>(MarkdownPlusGenerateTOC)")
+vim.keymap.set("n", "<localleader>hu", "<Plug>(MarkdownPlusGenerateTOC)")
