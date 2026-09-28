@@ -1,7 +1,7 @@
 # listings
-alias ls="eza --icons"
-alias l="eza -l --icons"
-alias la="eza -al --icons"
+alias ls="eza --icons always"
+alias l="eza -l --icons always"
+alias la="eza -al --icons always"
 
 # directory stuff
 alias md="mkdir"
