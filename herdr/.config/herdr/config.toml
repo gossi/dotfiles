@@ -29,7 +29,7 @@ teal = "#8bd5ca" # Teal
 peach = "#f5a97f" # Peach
 
 [keys]
-prefix = "ctrl+t"
+prefix = "cmd+e"
 goto = "prefix+space"
 # workspaces
 new_workspace = "cmd+n"
@@ -47,6 +47,9 @@ focus_pane_left = "cmd+shift+left"
 focus_pane_down = "cmd+shift+down"
 focus_pane_up = "cmd+shift+up"
 focus_pane_right = "cmd+shift+right"
+# worktrees
+workspace_picker = "prefix+n"
+# new_worktree = "prefix+shift+n"
 
 [[keys.command]]
 key = "prefix+g"
@@ -60,6 +63,7 @@ height = "90%"
 key = "prefix+o"
 type = "plugin_action"
 command = "pj.open-picker"
+description = "Open pj"
 
 [[keys.command]]
 key = "prefix+p"
