@@ -6,6 +6,10 @@ working_dir = "~/code/gossi/sportipedia"
 name = "root"
 
 [[tabs]]
+name = "OpenCode"
+command = "opencode"
+
+[[tabs]]
 name = "Services"
 
 [[tabs.panes]]
@@ -17,10 +21,6 @@ command = "pp dev"
 split = "right"
 
 [[tabs]]
-name = "Support"
-working_dir = "support"
-
-[[tabs]]
 name = "Apps"
 
 [[tabs.panes]]
@@ -29,3 +29,15 @@ working_dir = "apps/admin"
 [[tabs.panes]]
 working_dir = "apps/catalog"
 split = "right"
+
+[[tabs]]
+name = "Support"
+working_dir = "support"
+
+[[tabs.panes]]
+working_dir = "support/ui"
+
+[[tabs.panes]]
+working_dir = "support/user"
+split = "right"
+
